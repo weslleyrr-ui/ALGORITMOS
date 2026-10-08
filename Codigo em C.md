@@ -23,7 +23,22 @@ int main()
         printf("5 - Estatisticas\n");
         printf("0 - Sair\n");
         printf("Escolha: ");
-        scanf("%d", &opcao);
+
+        int leitura_menu = scanf("%d", &opcao);
+        if (leitura_menu == EOF){
+            return 0;
+        }
+        if (leitura_menu != 1){
+            int caractere_menu;
+            printf("entrada invalida! Digite um numero do menu.\n");
+            while ((caractere_menu = getchar()) != '\n' && caractere_menu != EOF)
+            {
+                /*descartou a entrada inválida*/
+            }
+            opcao = -1; 
+            continue;
+        }
+
 
         switch (opcao)
         {
@@ -196,6 +211,7 @@ int main()
                     if (quantidades[i] < 5)
                     {
                         estoque_baixo = 1;
+                        printf("Item na posicao %d: apenas %d unidades.\n", i, quantidades[i]);
                     }
                 }
 
