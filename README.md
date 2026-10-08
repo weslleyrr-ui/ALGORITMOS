@@ -69,22 +69,51 @@ Evita erros de dados garantindo que o preço seja positivo e a quantidade não s
 `Quantidade: 10`  
 `Cadastrado com sucesso!`
 
-## **⚙️ Funcionalidades do Menu**
+## ⚙️ Funcionalidades do Menu
 
-> * **1 \- Cadastrar**: Insere o preço e a quantidade do salgado no próximo índice livre.  
-> * **2 \- Listar**: Exibe todos os itens cadastrados com índices, preços e quantidades.  
-> * **3 \- Modificar**: Altera preço e quantidade de um item selecionado pelo seu índice.  
-> * **4 \- Apagar**: Remove o item e reorganiza o vetor deslocando os elementos à direita.  
-> * **5 \- Estatísticas**: Exibe média de preços, valor total em estoque e alerta de estoque baixo (\< 5 unidades).  
-> * **0 \- Sair**: Encerra a execução do programa.
+- **1 - Cadastrar:** Insere o preço e a quantidade no próximo índice livre.
+- **2 - Listar:** Exibe os itens cadastrados com posições, preços e quantidades.
+- **3 - Modificar:** Altera preço e quantidade de um item. Valores fora das regras mantêm os dados anteriores. Letras nos campos de novo preço e nova quantidade geram um aviso e uma nova tentativa.
+- **4 - Apagar:** Remove o item e desloca os elementos seguintes para a esquerda.
+- **5 - Estatísticas:** Exibe média de preços, valor total em estoque e a posição e quantidade dos itens com menos de 5 unidades.
+- **0 - Sair:** Encerra o programa.
 
-## **🛠️ Como Compilar e Executar no Linux**
+Se forem digitadas letras no menu, o programa avisa e apresenta o menu novamente.
 
-`# 1. Compile o código fonte (garanta que está na pasta do projeto)`  
-`gcc "Codigo em C-Lanchonete.c" -o estoque`
+## 🛠️ Como Compilar e Executar
 
-`# 2. Execute o programa`  
-`./estoque`
+Para compilar seguindo as instruções abaixo, é necessário ter o GCC instalado e disponível no terminal.
+Execute os comandos na pasta do projeto.
+
+O código C está no arquivo `Codigo em C.md`. A opção `-x c` indica ao GCC que esse arquivo deve ser compilado como C.
+
+### Windows
+
+Compile:
+
+```bash
+gcc -x c -std=c11 -Wall -Wextra "Codigo em C.md" -o estoque.exe
+```
+
+Execute no terminal do VS Code (PowerShell ou Prompt de Comando):
+
+```powershell
+.\estoque.exe
+```
+
+### Linux
+
+Compile:
+
+```bash
+gcc -x c -std=c11 -Wall -Wextra "Codigo em C.md" -o estoque
+```
+
+Execute:
+
+```bash
+./estoque
+```
 
 ## **📋 Regras de Negócio e Limitações**
 
@@ -96,4 +125,4 @@ Evita erros de dados garantindo que o preço seja positivo e a quantidade não s
 ## Integrantes
 - Weslley Romeu Rego
 - Camilla Victoria Ferreira Costa
--
+- Francinalda de Araujo Maia
