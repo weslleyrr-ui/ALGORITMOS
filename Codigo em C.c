@@ -46,10 +46,38 @@ int main()
         case 1: // CADASTRAR
             if (total < TAM_MAX)
             {
-                printf("Preco: ");
-                scanf("%f", &precos[total]);
-                printf("Quantidade: ");
-                scanf("%d", &quantidades[total]);
+                int leitura;
+                int caractere;
+
+                do{
+                    printf("Preco:");
+                    leitura = scanf("%f", &precos[total]);
+
+                    if (leitura == EOF){
+                        return 0;
+                    }
+                    if (leitura != 1){
+                        printf("Entrada invalida. Digite um numero.\n");
+                        while ((caractere = getchar()) != '\n' && caractere != EOF){
+                            /*descarta a entrada inválida*/
+                        }
+                    }
+                } while (leitura != 1);
+
+                do{
+                    printf("quantidade: ");
+                    leitura = scanf("%d", &quantidades[total]);
+
+                    if (leitura == EOF){
+                        return 0;
+                    }
+                    if (leitura !=1){
+                        printf("Entrada invalida. Digite um numero inteiro.\n");
+                        while ((caractere = getchar()) != '\n' && caractere != EOF){
+                            /*descarta a entrada invalida*/
+                        }
+                    }
+                } while (leitura != 1);
 
                 // Valida entradas invalidas
                 if (precos[total] > 0 && quantidades[total] >= 0)
