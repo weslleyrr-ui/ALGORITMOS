@@ -85,17 +85,17 @@ Se forem digitadas letras no menu, o programa avisa e apresenta o menu novamente
 Para compilar seguindo as instruções abaixo, é necessário ter o GCC instalado e disponível no terminal.
 Execute os comandos na pasta do projeto.
 
-O código C está no arquivo `Codigo em C.md`. A opção `-x c` indica ao GCC que esse arquivo deve ser compilado como C.
+O código C está no arquivo `Codigo em C.c`.
 
 ### Windows
 
 Compile:
 
 ```bash
-gcc -x c -std=c11 -Wall -Wextra "Codigo em C.md" -o estoque.exe
+gcc -std=c11 -Wall -Wextra "Codigo em C.c" -o estoque.exe
 ```
 
-Execute no terminal do VS Code (PowerShell ou Prompt de Comando):
+Execute no PowerShell ou Prompt de Comando:
 
 ```powershell
 .\estoque.exe
@@ -106,7 +106,7 @@ Execute no terminal do VS Code (PowerShell ou Prompt de Comando):
 Compile:
 
 ```bash
-gcc -x c -std=c11 -Wall -Wextra "Codigo em C.md" -o estoque
+gcc -std=c11 -Wall -Wextra "Codigo em C.c" -o estoque
 ```
 
 Execute:
